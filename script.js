@@ -1,21 +1,26 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var getLength;
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var upper = getUpper.split("");
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var lower = getLower.split("");
+var passLength;
+var upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var upper= upperCase.split("");
+var lowerCase= "abcdefghijklmnopqrstuvwxyz";
+var lower = lowerCase.split("");
 var numeric = "0123456789";
-var number = getNumber.split("");
-var specialCh= "~!@#$%^&*()-_=+[{]}?";
-var special = getSymbol.split("");
-var getChoices = [];
-var charParameters = [];
-
+var number = numeric.split("");
+var specialCh = "~!@#$%^&*()-_=+<>/?[{]}";
+var special = specialCh.split("");
+var criteriaChoices = [];
+var criteria = [];
 
 
 // Write password to the #password input
 function writePassword() {
+  // Prompt for password length.
+  var passLength = (prompt("Please enter the amount of characters your would like, must be between 8 and 128."));
+  console.log(passLength);
+ 
+
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
