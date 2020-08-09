@@ -50,7 +50,12 @@ function writePassword() {
     console.log("special characters");
     criteriaChoices = criteriaChoices.concat(special);
   }
-
+  
+// Alert for when user does not slect at least one character type. 
+  if (upperCase === false || lowerCase === false || numeric === false || specialCh === false) {
+    alert("WARNING! Your password must contain at least one character type. Please click on 'Generate Password' button again.");
+    return "";
+  }
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
