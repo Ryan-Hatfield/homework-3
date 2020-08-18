@@ -22,7 +22,7 @@ function writePassword() {
 
 function generatePassword() {
 // Prompt for password length.
-  var passLength = (prompt("Please enter the amount of characters your would like, must be between 8 and 128."));
+  var passLength = (prompt("Please enter the amount of characters you would like, must be between 10 and 128."));
   console.log(passLength);
 
 // Confirmation to add uppercase letters. 
@@ -39,7 +39,7 @@ function generatePassword() {
     criteriaChoices = criteriaChoices.concat(lower);
   }
 
-// Confirmtion to add numbers. 
+// Confirmation to add numbers. 
   numeric = confirm("Do you want to include numbers? Click OK for yes and Cancel for no.");
   if (numeric === true) {
     console.log("numbers");
